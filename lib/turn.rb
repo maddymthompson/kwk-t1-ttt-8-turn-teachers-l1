@@ -1,12 +1,12 @@
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
+puts "Welcome to Tic Tac Toe!"
+display_board(board)
+turn(board)
 
-
-
-
-
-
-
-
+def turn(board)
+  puts "Please enter 1-9:"
+end
 def input_to_index(input)
   input.to_i-1
 end
@@ -18,7 +18,7 @@ end
 def turn(board)
 index = "INVALID"
 
-  until valid_move(board, index)
+  until valid_move?(board, index)
   puts "Please enter 1-9"
   input = gets.strip
 
@@ -40,4 +40,3 @@ end
 def position_taken?(board, index)
   board[index] != " "
 end
-  
